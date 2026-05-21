@@ -551,11 +551,16 @@ table {
 
 .insurance-table {
   min-width: 0;
+  width: 100%;
 }
 
 .insurance-table th,
 .insurance-table td {
   text-align: center;
+}
+
+.insurance-section .note {
+  margin-top: 0.75rem;
 }
 
 th,
@@ -584,8 +589,17 @@ tr:last-child td {
 }
 
 /* —— Tournaments —— */
-.tournament-poster-section {
-  padding: 0 0 0.35rem;
+.tournaments-body {
+  padding-top: 0.25rem;
+}
+
+.tournaments-layout {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.tournament-poster-col {
+  min-width: 0;
 }
 
 .series-poster {
@@ -1021,10 +1035,15 @@ textarea {
   text-align: center;
 }
 
-/* —— Desktop enhancements —— */
+/* —— Tablet & desktop —— */
 @media (min-width: 720px) {
   :root {
     --page-padding: 24px;
+    --header-h: 52px;
+  }
+
+  body {
+    font-size: 16px;
   }
 
   .brand img {
@@ -1036,16 +1055,111 @@ textarea {
     padding: 0.8rem 0.5rem;
   }
 
+  main section {
+    padding: 1.6rem 0;
+  }
+
+  .page-hero {
+    padding: 1.5rem 0 0.75rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+    max-width: 42rem;
+  }
+
+  .section-head h2 {
+    font-size: 1.2rem;
+  }
+
+  .section-head p {
+    font-size: 0.95rem;
+  }
+
+  .hero .container {
+    padding-inline: var(--page-padding);
+    max-width: 1100px;
+  }
+
   .hero-card {
-    min-height: clamp(252px, 34vh, 332px);
+    border-radius: var(--radius);
+    min-height: clamp(280px, 38vh, 400px);
   }
 
   .hero-title {
-    font-size: 2.35rem;
+    font-size: 2.5rem;
+  }
+
+  .hero-lead {
+    font-size: 1rem;
+    max-width: 28rem;
+  }
+
+  .home-highlights {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .home-highlights li {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 0.75rem;
+    border-bottom: none !important;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .home-highlights li:not(:last-child) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .highlight-body {
+    padding-right: 0;
   }
 
   .stakes-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .stake-card {
+    padding: 1rem 1.1rem;
+  }
+
+  .stake-card h3 {
+    font-size: 1.35rem;
+  }
+
+  .insurance-section .table-wrap {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .insurance-section .insurance-table {
+    min-width: 0;
+    font-size: 0.95rem;
+  }
+
+  .insurance-section .insurance-table th,
+  .insurance-section .insurance-table td {
+    padding: 0.8rem 1.25rem;
+  }
+
+  .tournament-row {
+    padding: 1rem 1.15rem;
+    gap: 1rem;
+  }
+
+  .tournament-info h3 {
+    font-size: 1.05rem;
   }
 
   .gallery-grid {
@@ -1053,6 +1167,7 @@ textarea {
     grid-template-areas:
       "main side1 side2"
       "main side3 side4";
+    gap: 0.85rem;
   }
 
   .gallery-grid figure.gallery-main {
@@ -1066,6 +1181,22 @@ textarea {
   .gallery-side3 { grid-area: side3; }
   .gallery-side4 { grid-area: side4; }
 
+  body[data-page="contact"] main > section:not(.page-hero) .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 2rem;
+    align-items: start;
+  }
+
+  body[data-page="contact"] .contact-block {
+    margin-bottom: 0;
+  }
+
+  body[data-page="contact"] .actions {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+
   .form-grid.cols-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -1077,9 +1208,7 @@ textarea {
   .grid.cols-2 {
     grid-template-columns: 1fr 1fr;
   }
-}
 
-@media (min-width: 720px) {
   .register-modal {
     align-items: center;
     padding: 1.5rem;
@@ -1087,5 +1216,113 @@ textarea {
 
   .register-modal-panel {
     border-radius: var(--radius);
+    max-width: 520px;
+  }
+
+  .rules-image-modal-panel {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 960px) {
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.35rem var(--page-padding) 0.5rem;
+  }
+
+  .topbar-shell {
+    padding-inline: 0;
+    flex-shrink: 0;
+  }
+
+  .subnav {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: 560px;
+    border-top: none;
+    border-radius: 10px;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .subnav a {
+    flex: 0 1 auto;
+    padding: 0.65rem 1.35rem;
+    min-width: 5.5rem;
+  }
+
+  .hero-card {
+    min-height: clamp(320px, 42vh, 480px);
+  }
+
+  .hero-title {
+    font-size: 2.85rem;
+  }
+
+  .tournaments-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    gap: 2rem 2.5rem;
+    align-items: start;
+  }
+
+  .tournament-poster-col {
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  .tournaments-body {
+    padding-top: 0.5rem;
+  }
+
+  .insurance-section .insurance-table thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .insurance-section .insurance-table tbody {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .insurance-section .insurance-table tbody tr {
+    display: table;
+    width: 50%;
+    table-layout: fixed;
+    box-sizing: border-box;
+  }
+
+  .insurance-section .insurance-table tbody tr:nth-child(odd):not(:last-child) {
+    border-right: 1px solid var(--line);
+  }
+
+  .insurance-section .insurance-table tbody tr:last-child:nth-child(odd) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1040px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .tournaments-layout {
+    grid-template-columns: minmax(300px, 380px) minmax(0, 1fr);
+    gap: 2.5rem 3rem;
+  }
+
+  .insurance-section .insurance-table th,
+  .insurance-section .insurance-table td {
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
   }
 }

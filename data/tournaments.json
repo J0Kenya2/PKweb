@@ -6,19 +6,21 @@
   "events": [
     {
       "id": "may-championship",
-      "title": "PokerKing Tournament",
-      "format": "No Limit Texas Hold'em",
+      "title": "PokerKing Grand Opening Tournament",
+      "date": "30th – 31st May",
+      "format": "No Limit Texas Hold'em · 2-Day Event",
       "buyIn": "Free Entry",
       "guarantee": "KSh 2,000,000 GTD",
       "startingStack": "30,000 Chips",
-      "showInList": false,
       "features": [
-        "30th – 31st May · 2-Day Event",
+        "Free entry starting stack: 30,000 chips",
         "Unlimited Rebuys for 3 Hours",
         "Single Rebuy: KSh 10,000 — 30,000 Chips",
         "Double Rebuy: KSh 20,000 — 60,000 Chips",
         "Single Add-on: 50,000 Chips @ KSh 10,000",
         "Double Add-on: 100,000 Chips @ KSh 20,000",
+        "Early Bird Bonus: +5,000 Chips",
+        "Website Registration Bonus: +5,000 Chips",
         "Blind Levels: 30 Minutes",
         "Late Registration & Rebuys: 8 Levels (4 Hours)"
       ],

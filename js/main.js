@@ -66,12 +66,17 @@
     t.date ? `${t.title} — ${t.date}${t.time ? ` ${t.time}` : ""}` : t.title;
 
   const tournamentSummary = (t) => {
-    const parts = [t.format, t.buyIn ? `Buy-in ${t.buyIn}` : ""].filter(Boolean);
+    const parts = [
+      t.date,
+      t.format,
+      t.buyIn ? `Buy-in ${t.buyIn}` : "",
+    ].filter(Boolean);
     return parts.join(" · ");
   };
 
   const renderTournamentDetails = (t) => {
     const facts = [
+      ["Date", t.date],
       ["Format", t.format],
       ["Buy-in", t.buyIn],
       ["Guarantee", t.guarantee],
@@ -233,7 +238,7 @@
       listRoot.querySelectorAll(".tournament-row:not(.is-closed)").forEach((btn) => {
         btn.addEventListener("click", () => {
           const id = btn.getAttribute("data-tournament-id");
-          const event = listEvents.find((e) => e.id === id);
+          const event = events.find((e) => e.id === id);
           openRegisterModal(event);
         });
       });

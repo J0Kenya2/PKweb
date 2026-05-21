@@ -4,7 +4,7 @@
  */
 window.POKERKING_CONFIG = {
   clubName: "PokerKing Nairobi",
-  address: "Ring Road Kilimani, 2F, Nairobi, Kenya",
+  address: "Ring Rd Kilimani, Alta Tower, 2F, Nairobi, Kenya",
   hours: "Daily · 13:00 – Late",
   phone: "+254 117 306 505",
   phoneTel: "+254117306505",
