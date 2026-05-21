@@ -1,8 +1,29 @@
 {
   "updated": "2026-05-21",
-  "seriesTitle": "PokerKing Tournament Series",
-  "seriesPoster": "assets/tournament-poster-kings-cup.png",
+  "seriesTitle": "",
+  "seriesPoster": "assets/PHOTO-2026-05-21-16-22-18.jpg",
+  "seriesRegisterEventId": "may-championship",
   "events": [
+    {
+      "id": "may-championship",
+      "title": "PokerKing Tournament",
+      "format": "No Limit Texas Hold'em",
+      "buyIn": "Free Entry",
+      "guarantee": "KSh 2,000,000 GTD",
+      "startingStack": "30,000 Chips",
+      "showInList": false,
+      "features": [
+        "30th – 31st May · 2-Day Event",
+        "Unlimited Rebuys for 3 Hours",
+        "Single Rebuy: KSh 10,000 — 30,000 Chips",
+        "Double Rebuy: KSh 20,000 — 60,000 Chips",
+        "Single Add-on: 50,000 Chips @ KSh 10,000",
+        "Double Add-on: 100,000 Chips @ KSh 20,000",
+        "Blind Levels: 30 Minutes",
+        "Late Registration & Rebuys: 8 Levels (4 Hours)"
+      ],
+      "registrationOpen": true
+    },
     {
       "id": "tuesday-madness",
       "title": "PokerKing Tuesday Madness",
@@ -26,6 +47,7 @@
       "title": "PokerKing Mystery Bounty",
       "format": "No Limit Texas Hold'em Mystery Bounty",
       "buyIn": "KSh 5,000 + KSh 2,500 Bounty",
+      "guarantee": "KSh 500,000 GTD",
       "startingStack": "30,000 Chips",
       "features": [
         "Single Rebuy: KSh 5,000 + KSh 2,500 Bounty — 30,000 Chips",

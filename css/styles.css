@@ -589,8 +589,10 @@ tr:last-child td {
 }
 
 .series-poster {
+  display: block;
   margin: 0;
   width: 100%;
+  padding: 0;
   aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 10px;
@@ -598,6 +600,18 @@ tr:last-child td {
   position: relative;
   box-shadow: var(--shadow);
   background: #0a0a0a;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.series-poster:hover,
+.series-poster:focus-visible {
+  border-color: rgba(197, 155, 58, 0.55);
+  box-shadow: 0 8px 28px rgba(197, 155, 58, 0.12);
+  outline: none;
 }
 
 .series-poster img {
@@ -607,7 +621,7 @@ tr:last-child td {
   object-fit: cover;
 }
 
-.series-poster figcaption {
+.series-poster-caption {
   position: absolute;
   left: 0;
   right: 0;

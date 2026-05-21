@@ -170,21 +170,42 @@
 
       if (posterWrap && posterImg && data.seriesPoster) {
         posterImg.src = data.seriesPoster;
-        posterImg.alt = data.seriesTitle ? `${data.seriesTitle} poster` : "Tournament series poster";
+        posterImg.alt = data.seriesTitle
+          ? `${data.seriesTitle} poster`
+          : "PokerKing tournament poster — tap to register";
         if (posterCaption) {
-          posterCaption.textContent = data.seriesTitle || "";
+          const caption = data.seriesTitle || "";
+          posterCaption.textContent = caption;
+          posterCaption.hidden = !caption;
         }
         posterWrap.hidden = false;
-      } else if (posterWrap && events[0]?.poster) {
+      } else if (posterWrap && posterImg && events[0]?.poster) {
         posterImg.src = events[0].poster;
         posterImg.alt = `${events[0].title} poster`;
-        if (posterCaption) posterCaption.textContent = events[0].title;
+        if (posterCaption) {
+          posterCaption.textContent = events[0].title;
+          posterCaption.hidden = false;
+        }
         posterWrap.hidden = false;
+      }
+
+      const posterRegisterBtn = document.querySelector("[data-series-poster-register]");
+      if (posterRegisterBtn && !posterRegisterBtn.dataset.bound) {
+        posterRegisterBtn.dataset.bound = "1";
+        posterRegisterBtn.addEventListener("click", () => {
+          const id = data.seriesRegisterEventId;
+          const event =
+            (id && events.find((e) => e.id === id)) ||
+            events.find((e) => e.registrationOpen !== false);
+          openRegisterModal(event);
+        });
       }
 
       if (!listRoot) return;
 
-      listRoot.innerHTML = events
+      const listEvents = events.filter((t) => t.showInList !== false);
+
+      listRoot.innerHTML = listEvents
         .map((t) => {
           const open = t.registrationOpen !== false;
           const label = escapeHtml(eventLabel(t));
@@ -212,7 +233,7 @@
       listRoot.querySelectorAll(".tournament-row:not(.is-closed)").forEach((btn) => {
         btn.addEventListener("click", () => {
           const id = btn.getAttribute("data-tournament-id");
-          const event = events.find((e) => e.id === id);
+          const event = listEvents.find((e) => e.id === id);
           openRegisterModal(event);
         });
       });
