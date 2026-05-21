@@ -593,7 +593,6 @@ tr:last-child td {
   margin: 0;
   width: 100%;
   padding: 0;
-  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid var(--line);
@@ -617,8 +616,8 @@ tr:last-child td {
 .series-poster img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  vertical-align: top;
 }
 
 .series-poster-caption {
