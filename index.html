@@ -6,296 +6,120 @@
     <title>PokerKing Nairobi | Texas Hold'em Poker House</title>
     <meta
       name="description"
-      content="PokerKing Nairobi official site. Live Texas Hold'em cash games, weekly tournaments, premium poker house experience in Nairobi."
+      content="PokerKing Nairobi — premium Texas Hold'em cash games and tournaments in Kilimani, Nairobi."
     />
     <link rel="icon" type="image/jpeg" href="assets/Pokerking_sq.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body data-page="home">
     <header class="topbar">
-      <div class="container nav">
-        <a class="brand" href="#home" aria-label="PokerKing Nairobi home">
-          <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
-        </a>
-        <button class="menu-button" type="button" data-menu-button aria-label="Open navigation">
-          Menu
-        </button>
-        <nav class="menu" data-menu>
-          <a href="#home">Home</a>
-          <a href="#agenda">Agenda</a>
-          <a href="#cash-games">Cash Games</a>
-          <a href="#tournaments">Tournaments</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <div class="topbar-shell">
+        <div class="header-brand-row">
+          <a class="brand" href="index.html" aria-label="PokerKing Nairobi home">
+            <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
+          </a>
+        </div>
       </div>
+      <nav class="subnav" data-subnav aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="cash-games.html" data-nav="cash">Cash</a>
+        <a href="tournaments.html" data-nav="tournaments">Tournaments</a>
+        <a href="gallery.html" data-nav="gallery">Gallery</a>
+      </nav>
     </header>
 
     <main>
-      <section class="hero" id="home">
+      <section class="hero">
         <div class="container">
           <article class="hero-card">
-            <img src="assets/hero-cash-game-inplay-ref.png" alt="PokerKing Nairobi in-play cash game closeup" />
+            <img src="assets/hero-cash-game-inplay-ref.png" alt="Live cash game at PokerKing Nairobi" />
             <div class="hero-content">
-              <span class="tag">Nairobi, Kenya</span>
-              <h1>Official Home of PokerKing Texas Hold'em Nights</h1>
+              <span class="tag">Nairobi · Kenya</span>
+              <h1>PokerKing Nairobi</h1>
               <p class="lead">
-                Premium poker house atmosphere, professional dealers, and a full weekly calendar of cash
-                games plus tournament action.
+                Premium Texas Hold'em — professional dealers, secure floor, and daily cash plus
+                tournament action.
               </p>
-              <div class="actions">
-                <a class="btn primary" href="#agenda">View This Week Schedule</a>
-                <a class="btn secondary" href="#contact">Club Location & Contact</a>
-              </div>
             </div>
           </article>
         </div>
       </section>
 
-      <section>
+      <section class="home-body-section">
         <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Why Players Choose PokerKing</h2>
-              <p>Designed for serious games and comfortable long sessions.</p>
-            </div>
-          </div>
-          <div class="grid cols-3">
-            <article class="card">
-              <h3>Professional Floor</h3>
-              <p>Dedicated dealers, clear blind structures, and smooth table management every session.</p>
-            </article>
-            <article class="card">
-              <h3>Balanced Game Mix</h3>
-              <p>Daily NLHE cash tables, deepstack events, and weekend highlight tournaments.</p>
-            </article>
-            <article class="card">
-              <h3>Premium Club Comfort</h3>
-              <p>Elegant space, strong security standards, and friendly service from check-in to cash-out.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="agenda">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Weekly Poker Agenda</h2>
-              <p>Live tournament and satellite schedule (EAT, UTC+3).</p>
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Event</th>
-                  <th>Buy-in</th>
-                  <th>Start Stack</th>
-                  <th>Levels</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Tue 19 May</td>
-                  <td>15:00</td>
-                  <td>NLHE Satellite - High Roller</td>
-                  <td>$80</td>
-                  <td>15,000</td>
-                  <td>15 min</td>
-                </tr>
-                <tr>
-                  <td>Tue 19 May</td>
-                  <td>17:00</td>
-                  <td>Turbo Dash</td>
-                  <td>$60</td>
-                  <td>25,000</td>
-                  <td>20 min</td>
-                </tr>
-                <tr>
-                  <td>Tue 19 May</td>
-                  <td>19:00</td>
-                  <td>High Roller - Flight A</td>
-                  <td>$350</td>
-                  <td>80,000</td>
-                  <td>30 min</td>
-                </tr>
-                <tr>
-                  <td>Wed 20 May</td>
-                  <td>15:00</td>
-                  <td>Main Event - Day 1A</td>
-                  <td>$250</td>
-                  <td>50,000</td>
-                  <td>35 min</td>
-                </tr>
-                <tr>
-                  <td>Thu 21 May</td>
-                  <td>18:00</td>
-                  <td>The Voyage Deepstack</td>
-                  <td>$120</td>
-                  <td>88,000</td>
-                  <td>20 min</td>
-                </tr>
-                <tr>
-                  <td>Sun 24 May</td>
-                  <td>16:00</td>
-                  <td>Main Event Final Day</td>
-                  <td>Qualified</td>
-                  <td>-</td>
-                  <td>40 min</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section id="cash-games">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Cash Games</h2>
-              <p>No Limit Hold'em waiting list structure · 4% rake.</p>
-            </div>
-          </div>
-          <div class="stakes-grid">
-            <article class="stake-card">
-              <h3>100 / 200</h3>
-              <p>Buy-in: 10,000 - 50,000 KES</p>
-            </article>
-            <article class="stake-card">
-              <h3>200 / 500</h3>
-              <p>Buy-in: 20,000 - 150,000 KES</p>
-            </article>
-            <article class="stake-card">
-              <h3>500 / 1000</h3>
-              <p>Buy-in: 50,000 - 250,000 KES</p>
-            </article>
-            <article class="stake-card">
-              <h3>1000 / 2000</h3>
-              <p>Buy-in: 100,000 - uncapped</p>
-            </article>
-            <article class="stake-card">
-              <h3>2000 / 4000</h3>
-              <p>Buy-in: 200,000 - unlimited</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="tournaments">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Recent Tournaments</h2>
-              <p>Featured poster lineup of our latest poker events.</p>
-            </div>
-          </div>
-          <div class="tournaments-posters">
-            <article class="poster-card">
-              <img src="assets/tournament-poster-kings-cup.png" alt="Kings Cup poker tournament poster" />
-              <div class="poster-caption">
-                <h3>King's Cup Nairobi</h3>
-                <p>22 May · Main Floor</p>
+          <ul class="home-highlights">
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 3l7 4v5c0 4.2-2.9 7.4-7 9-4.1-1.6-7-4.8-7-9V7l7-4z" />
+                  <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div class="highlight-body">
+                <strong>Professional Floor</strong>
+                <p>Clear structures, trained dealers, and smooth table management every session.</p>
               </div>
-            </article>
-            <article class="poster-card">
-              <img
-                src="assets/tournament-poster-savanna-deepstack.png"
-                alt="Savanna Deepstack tournament poster"
-              />
-              <div class="poster-caption">
-                <h3>Savanna Deepstack</h3>
-                <p>23 May · Deepstack Special</p>
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <circle cx="8" cy="14" r="4" />
+                  <circle cx="14" cy="10" r="3" />
+                  <circle cx="17" cy="15" r="2.5" />
+                </svg>
+              </span>
+              <div class="highlight-body">
+                <strong>All Stake Levels</strong>
+                <p>From 100/200 KES through high-limit NLHE — cash games run daily from 13:00.</p>
               </div>
-            </article>
-            <article class="poster-card">
-              <img
-                src="assets/tournament-poster-east-africa-highroller.png"
-                alt="East Africa High Roller tournament poster"
-              />
-              <div class="poster-caption">
-                <h3>East Africa High Roller</h3>
-                <p>24 May · Featured Event</p>
+            </li>
+            <li>
+              <span class="highlight-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M6 4h12v3H6zM8 7v11M16 7v11" stroke-linecap="round" />
+                  <path d="M10 20h4" stroke-linecap="round" />
+                  <path d="M12 7v4M10.5 9.5h3" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div class="highlight-body">
+                <strong>Tournament Calendar</strong>
+                <p>Weekly series, deepstacks, and featured events — register online or at the desk.</p>
               </div>
-            </article>
-            <article class="poster-card">
-              <img src="assets/tournament-poster-mystery-bounty.png" alt="Mystery Bounty tournament poster" />
-              <div class="poster-caption">
-                <h3>Mystery Bounty Night</h3>
-                <p>25 May · Knockout Format</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+            </li>
+          </ul>
 
-      <section id="gallery">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Club Gallery</h2>
-              <p>Visual preview of room atmosphere and real table style.</p>
+          <div class="home-contact">
+            <h2>Visit Us</h2>
+            <p class="contact-line"><span data-contact-address></span></p>
+            <p class="contact-line">
+              <a data-contact-phone href="#"></a>
+            </p>
+            <div class="social-row" aria-label="Social and messaging">
+              <a class="social-btn" data-whatsapp href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+              </a>
+              <a class="social-btn" data-instagram href="#" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
+                  />
+                </svg>
+              </a>
+              <a class="social-btn" data-tiktok href="#" target="_blank" rel="noopener" aria-label="TikTok">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z"
+                  />
+                </svg>
+              </a>
             </div>
-          </div>
-          <div class="gallery-grid">
-            <figure class="gallery-main">
-              <img src="assets/gallery-cash-game-closeup.png" alt="PokerKing cash game closeup view" />
-              <figcaption>Live cash game closeup</figcaption>
-            </figure>
-            <figure class="gallery-side1">
-              <img src="assets/gallery-real-vip-table-2.png" alt="PokerKing VIP table angle" />
-              <figcaption>VIP table perspective</figcaption>
-            </figure>
-            <figure class="gallery-side2">
-              <img src="assets/gallery-real-signage-3.png" alt="PokerKing signage wall" />
-              <figcaption>Signature entrance and wall mood</figcaption>
-            </figure>
-            <figure class="gallery-side3">
-              <img src="assets/hero-cash-game-inplay-ref.png" alt="Poker in-play hands and cards closeup" />
-              <figcaption>In-play closeup with hands and live cards</figcaption>
-            </figure>
-            <figure class="gallery-side4">
-              <img src="assets/gallery-real-closeup-chips-4.png" alt="Poker table chips closeup scene" />
-              <figcaption>Table chips and felt close-up</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <div class="section-head">
-            <div>
-              <h2>Contact & Venue Access</h2>
-              <p>For table status and entry assistance, contact the floor desk directly.</p>
-            </div>
-          </div>
-          <div class="contact-clean">
-            <article>
-              <h3>Visit PokerKing Nairobi</h3>
-              <p><strong>Address:</strong> Ring R的Kilimani, Nairobi, Kenya</p>
-              <p><strong>Hours:</strong> Daily, 14:00 - Late</p>
-              <p><strong>Phone / WhatsApp:</strong> +254 117 306 505</p>
-              <p><strong>Email:</strong> info@pokerking.ke</p>
-            </article>
-            <article>
-              <h3>House Policies</h3>
-              <ul class="plain-list">
-                <li>Valid ID required at check-in.</li>
-                <li>Smart casual dress code after 18:00.</li>
-                <li>Responsible gaming policy is strictly enforced.</li>
-                <li>Walk-in players are welcome based on live seat availability.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="actions contact-actions">
-            <a class="btn primary" href="mailto:info@pokerking.ke">Email Reservation</a>
-            <a class="btn secondary" href="https://wa.me/254117306505" target="_blank" rel="noopener"
-              >WhatsApp Desk</a
-            >
+            <p class="home-contact-more">
+              <a href="contact.html">Full contact &amp; entry details →</a>
+            </p>
           </div>
         </div>
       </section>
@@ -303,10 +127,11 @@
 
     <footer class="footer">
       <div class="container">
-        <p>PokerKing Nairobi · Premium Texas Hold'em Club · <span data-year></span></p>
+        <p>PokerKing Nairobi · Premium Texas Hold'em · <span data-year></span></p>
       </div>
     </footer>
 
+    <script src="js/site-config.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

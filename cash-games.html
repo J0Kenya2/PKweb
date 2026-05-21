@@ -4,52 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokerKing Nairobi | Cash Games</title>
-    <meta name="description" content="PokerKing Nairobi cash game structures and table details." />
+    <meta name="description" content="NLHE cash game stakes, buy-ins, and insurance odds at PokerKing Nairobi." />
     <link rel="icon" type="image/jpeg" href="assets/Pokerking_sq.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body data-page="cash">
     <header class="topbar">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="PokerKing Nairobi home">
-          <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
-        </a>
-        <button class="menu-button" type="button" data-menu-button aria-label="Open navigation">
-          Menu
-        </button>
-        <nav class="menu" data-menu>
-          <a href="index.html">Home</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="cash-games.html">Cash Games</a>
-          <a href="tournaments.html">Tournaments</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <div class="topbar-shell">
+        <div class="header-brand-row">
+          <a class="brand" href="index.html" aria-label="PokerKing Nairobi home">
+            <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
+          </a>
+        </div>
       </div>
+      <nav class="subnav" data-subnav aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="cash-games.html" data-nav="cash">Cash</a>
+        <a href="tournaments.html" data-nav="tournaments">Tournaments</a>
+        <a href="gallery.html" data-nav="gallery">Gallery</a>
+      </nav>
     </header>
 
     <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Cash Games</h1>
+          <p>No Limit Hold'em · waiting list structure · 4% rake (capped per hand).</p>
+        </div>
+      </section>
+
       <section>
         <div class="container">
           <div class="section-head">
-            <div>
-              <h1>Cash Games</h1>
-              <p>Daily live tables for all regular player levels.</p>
-            </div>
-            <a class="btn primary" href="contact.html">Join Waitlist</a>
+            <h2>Live Stakes</h2>
+            <p>Buy-in ranges in Kenyan Shillings (KES). Tables open daily from 13:00.</p>
           </div>
-          <div class="grid cols-3">
-            <article class="card">
-              <h3>NLHE 1/2</h3>
-              <p>Beginner-friendly low-stakes game. Typical buy-in range: $50 to $200.</p>
+          <div class="stakes-grid">
+            <article class="stake-card">
+              <h3>100 / 200</h3>
+              <p>Buy-in: 10K – 50K KES</p>
             </article>
-            <article class="card">
-              <h3>NLHE 2/5</h3>
-              <p>Most active evening table. Typical buy-in range: $150 to $600.</p>
+            <article class="stake-card">
+              <h3>200 / 500</h3>
+              <p>Buy-in: 20K – 150K KES</p>
             </article>
-            <article class="card">
-              <h3>NLHE 5/10</h3>
-              <p>Prime-time action table. Typical buy-in range: $500 to $2,000.</p>
+            <article class="stake-card">
+              <h3>500 / 1000</h3>
+              <p>Buy-in: 50K – 250K KES</p>
+            </article>
+            <article class="stake-card">
+              <h3>1000 / 2000</h3>
+              <p>Buy-in: 100K – unlimited</p>
+            </article>
+            <article class="stake-card">
+              <h3>2000 / 4000</h3>
+              <p>Buy-in: 200K – unlimited</p>
+            </article>
+            <article class="stake-card">
+              <h3>5000 / 10000</h3>
+              <p>Buy-in: 500K – unlimited</p>
             </article>
           </div>
         </div>
@@ -58,39 +71,98 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <div>
-              <h2>Table Rules</h2>
-              <p>Simple, transparent standards to keep games fair.</p>
-            </div>
+            <h2>Table Insurance Odds</h2>
+            <p>Standard NLHE insurance premiums by outs remaining (single card to come).</p>
           </div>
-          <div class="grid cols-2">
-            <article class="card">
-              <h3>Core Rules</h3>
-              <p>
-                Texas Hold'em (No Limit), accepted dealer button format, mandatory chip visibility,
-                and verbal declarations are binding.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Game Integrity</h3>
-              <p>
-                Zero tolerance for collusion, soft play, or angle shooting. Floor decisions are final
-                for all disputes.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Seat & Waitlist</h3>
-              <p>
-                Walk-ins are welcome, but peak sessions prioritize pre-registered players by queue
-                order and stake preference.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Opening Hours</h3>
-              <p>
-                Monday to Sunday: 14:00 until close. Weekend high-action sessions usually run later.
-              </p>
-            </article>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Outs</th>
+                  <th>Payout Odds</th>
+                  <th>Insurance Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td>30 : 1</td><td>3.3%</td></tr>
+                <tr><td>2</td><td>16 : 1</td><td>6.3%</td></tr>
+                <tr><td>3</td><td>10 : 1</td><td>9.5%</td></tr>
+                <tr><td>4</td><td>7.5 : 1</td><td>12.5%</td></tr>
+                <tr><td>5</td><td>6 : 1</td><td>15.5%</td></tr>
+                <tr><td>6</td><td>5 : 1</td><td>18.5%</td></tr>
+                <tr><td>7</td><td>4 : 1</td><td>21.5%</td></tr>
+                <tr><td>8</td><td>3.5 : 1</td><td>24.5%</td></tr>
+                <tr><td>9</td><td>3 : 1</td><td>27.5%</td></tr>
+                <tr><td>10</td><td>2.5 : 1</td><td>30.5%</td></tr>
+                <tr><td>11</td><td>2.2 : 1</td><td>33.5%</td></tr>
+                <tr><td>12</td><td>2 : 1</td><td>36.5%</td></tr>
+                <tr><td>13</td><td>1.8 : 1</td><td>39.5%</td></tr>
+                <tr><td>14</td><td>1.6 : 1</td><td>42.5%</td></tr>
+                <tr><td>15</td><td>1.4 : 1</td><td>45.5%</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">
+            Premium is calculated on the insured portion of the pot. Maximum insurance per hand is
+            subject to floor approval. Split-pot and multi-way all-in situations may adjust available outs.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <h2>House Notes</h2>
+          </div>
+          <ul class="plain-list">
+            <li>Respect all players and staff.</li>
+            <li>No cheating, collusion, or abusive behavior.</li>
+            <li>Management decisions are final.</li>
+            <li>Keep chips visible at all times.</li>
+            <li>Protect your cards and personal belongings.</li>
+            <li>Act in turn and avoid unnecessary delays.</li>
+            <li>No phone use during active hands.</li>
+            <li>Maintain a clean and professional atmosphere.</li>
+            <li>Drink responsibly.</li>
+            <li>Enjoy the game and play fair.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <h2>Game Format</h2>
+          </div>
+          <ul class="plain-list">
+            <li>Texas Hold'em Cash Games</li>
+            <li>Professional Dealers on Every Table</li>
+            <li>Multiple Stakes Available</li>
+            <li>Daily Action &amp; Featured Games</li>
+            <li>Fair Play &amp; Secure Environment</li>
+            <li>Fast and Smooth Table Management</li>
+            <li>VIP Player Experience</li>
+            <li>Tournaments on Selected Days</li>
+            <li>Food &amp; Drinks Available</li>
+            <li>Friendly Atmosphere for All Players</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <h2>Waitlist</h2>
+          </div>
+          <article class="card">
+            <p>
+              Walk-ins welcome. Peak hours prioritize the live waitlist by stake preference and arrival
+              order.
+            </p>
+          </article>
+          <div class="actions">
+            <a class="btn primary" data-whatsapp href="#" target="_blank" rel="noopener">Join via WhatsApp</a>
+            <a class="btn secondary" href="contact.html">Contact Floor</a>
           </div>
         </div>
       </section>
@@ -102,6 +174,7 @@
       </div>
     </footer>
 
+    <script src="js/site-config.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -4,120 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PokerKing Nairobi | Tournaments</title>
-    <meta name="description" content="PokerKing Nairobi live tournament series and formats." />
+    <meta name="description" content="Upcoming poker tournaments at PokerKing Nairobi — schedule and online registration." />
     <link rel="icon" type="image/jpeg" href="assets/Pokerking_sq.jpg" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body data-page="tournaments">
     <header class="topbar">
-      <div class="container nav">
-        <a class="brand" href="index.html" aria-label="PokerKing Nairobi home">
-          <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
-        </a>
-        <button class="menu-button" type="button" data-menu-button aria-label="Open navigation">
-          Menu
-        </button>
-        <nav class="menu" data-menu>
-          <a href="index.html">Home</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="cash-games.html">Cash Games</a>
-          <a href="tournaments.html">Tournaments</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <div class="topbar-shell">
+        <div class="header-brand-row">
+          <a class="brand" href="index.html" aria-label="PokerKing Nairobi home">
+            <img src="assets/logo.png" alt="PokerKing Nairobi logo" />
+          </a>
+        </div>
       </div>
+      <nav class="subnav" data-subnav aria-label="Primary">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="cash-games.html" data-nav="cash">Cash</a>
+        <a href="tournaments.html" data-nav="tournaments">Tournaments</a>
+        <a href="gallery.html" data-nav="gallery">Gallery</a>
+      </nav>
     </header>
 
     <main>
-      <section>
+      <section class="page-hero">
         <div class="container">
-          <div class="section-head">
-            <div>
-              <h1>Live Tournament Series</h1>
-              <p>Signature formats inspired by major international poker festivals.</p>
+          <div class="page-hero-row">
+            <div class="page-hero-text">
+              <h1>Tournaments</h1>
+              <p>Featured series poster and upcoming flights — tap an event to register.</p>
             </div>
-            <a class="btn primary" href="contact.html">Register Event</a>
-          </div>
-          <div class="grid cols-3">
-            <article class="card">
-              <h3>Nairobi Poker Festival</h3>
-              <p>
-                Main seasonal festival with multiple flights, progressive satellites, and deep final day
-                structure.
-              </p>
-            </article>
-            <article class="card">
-              <h3>High Roller Series</h3>
-              <p>
-                Premium buy-in events for advanced players, with longer blind levels and stronger field
-                depth.
-              </p>
-            </article>
-            <article class="card">
-              <h3>Mystery Bounty Nights</h3>
-              <p>
-                Fast and exciting knockout format with random bounty draws, ideal for weekend headline
-                sessions.
-              </p>
-            </article>
+            <button type="button" class="btn secondary btn-compact" data-house-rules-open>
+              House Rules
+            </button>
           </div>
         </div>
       </section>
 
       <section>
         <div class="container">
+          <figure class="series-poster" data-series-poster hidden>
+            <img src="" alt="" data-series-poster-img />
+            <figcaption data-series-poster-caption></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
           <div class="section-head">
-            <div>
-              <h2>Standard Tournament Structure</h2>
-              <p>Reference settings for regular series events.</p>
-            </div>
+            <h2>Schedule</h2>
+            <p>All times EAT (UTC+3). Tap an event to register.</p>
           </div>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Stage</th>
-                  <th>Blind Level</th>
-                  <th>Duration</th>
-                  <th>Starting Stack</th>
-                  <th>Late Reg</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Day 1 (Main Event)</td>
-                  <td>100 / 100 + ante</td>
-                  <td>35 - 40 min</td>
-                  <td>50,000</td>
-                  <td>8 levels</td>
-                </tr>
-                <tr>
-                  <td>Turbo Flight</td>
-                  <td>100 / 200 + ante</td>
-                  <td>20 min</td>
-                  <td>50,000</td>
-                  <td>8 levels</td>
-                </tr>
-                <tr>
-                  <td>Deepstack Side Event</td>
-                  <td>100 / 100 + ante</td>
-                  <td>20 - 25 min</td>
-                  <td>70,000 - 88,000</td>
-                  <td>6 levels</td>
-                </tr>
-                <tr>
-                  <td>Final Day</td>
-                  <td>Carry over</td>
-                  <td>40 - 60 min</td>
-                  <td>Bagged chips</td>
-                  <td>Closed</td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="tournament-schedule" data-tournament-list>
+            <p class="note">Loading schedule…</p>
           </div>
         </div>
       </section>
     </main>
+
+    <div class="register-modal" data-register-modal hidden>
+      <div class="register-modal-backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
+      <div
+        class="register-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="register-modal-title"
+      >
+        <button class="register-modal-close" type="button" data-modal-close aria-label="Close">×</button>
+        <h2 id="register-modal-title">Register</h2>
+        <p class="register-modal-event" data-modal-event-label></p>
+        <form class="form-card" data-registration-form action="YOUR_FORM_ENDPOINT" method="post">
+          <input type="hidden" name="tournament" data-tournament-input value="" />
+          <div class="form-grid">
+            <label>
+              Full name
+              <input type="text" name="name" required autocomplete="name" />
+            </label>
+            <label>
+              Phone / WhatsApp
+              <input type="tel" name="phone" required autocomplete="tel" />
+            </label>
+            <label>
+              Email (optional)
+              <input type="email" name="email" autocomplete="email" />
+            </label>
+            <label>
+              Notes (optional)
+              <textarea name="notes" placeholder="Preferred flight, partner name, etc."></textarea>
+            </label>
+          </div>
+          <input type="hidden" name="_subject" value="PokerKing Tournament Registration" />
+          <div class="actions" style="margin-top: 0.85rem">
+            <button class="btn primary" type="submit">Submit Registration</button>
+          </div>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="rules-image-modal" data-house-rules-modal hidden>
+      <div class="rules-image-modal-backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
+      <div
+        class="rules-image-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="PokerKing tournament rules"
+      >
+        <button class="rules-image-modal-close" type="button" data-modal-close aria-label="Close">
+          ×
+        </button>
+        <img
+          src="assets/PHOTO-2026-05-21-15-07-03.jpg"
+          alt="PokerKing poker tournament rules"
+          loading="lazy"
+        />
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">
@@ -125,6 +127,7 @@
       </div>
     </footer>
 
+    <script src="js/site-config.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

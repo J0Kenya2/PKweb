@@ -1,47 +1,70 @@
 # PokerKing Nairobi Website
 
-PokerKing Nairobi 官网静态站点（无需安装任何前端框架），用于展示：
+Mobile-first static website for PokerKing Nairobi (HTML + CSS + JavaScript, no build step).
 
-- 品牌首页与核心介绍
-- 现金桌信息（Cash Games）
-- 锦标赛与赛程（Tournaments / Agenda）
-- 场地图库（Gallery）
-- 联系方式与报名入口
+## Pages
 
-## 技术方案
+| Page | File | Content |
+|------|------|---------|
+| Home | `index.html` | Compact hero, club highlights, address & social icons |
+| Cash Games | `cash-games.html` | Stake levels (KES), insurance odds table |
+| Tournaments | `tournaments.html` | Posters (from JSON), event details, registration form |
+| Gallery | `gallery.html` | Club and tournament photos |
+| Contact | `contact.html` | Full venue info, policies, social links |
 
-为保证你后续维护最简单，本站使用：
-
-- `HTML` + `CSS` + `JavaScript`（纯静态）
-- 无构建工具、无 npm、无额外依赖
-
-你只需要一个浏览器就能预览。
-
-## 文件结构
-
-- `index.html`：官网首页
-- `agenda.html`：赛事日程页
-- `cash-games.html`：现金桌页
-- `tournaments.html`：锦标赛页
-- `gallery.html`：图库页
-- `contact.html`：联系与到场信息
-- `css/styles.css`：全站样式
-- `js/main.js`：移动菜单、年份等基础交互
-- `assets/`：Logo 与海报图片素材
-
-## 本地预览
-
-直接双击任意 `html` 文件即可打开。
-
-如果你想更接近线上访问方式，可在当前目录运行：
+## Local preview
 
 ```bash
 python3 -m http.server 8080
 ```
 
-然后访问：`http://localhost:8080`
+Open `http://localhost:8080` (use a local server so tournament JSON loads correctly).
 
-## 素材说明
+## Site settings
 
-- Logo：`assets/logo.png`（你提供的品牌图）
-- 海报：已通过 RunningHub 生成并放在 `assets/` 目录
+Edit **`js/site-config.js`** for:
+
+- Address, phone, email, hours
+- WhatsApp / Instagram / TikTok URLs
+- Tournament registration form endpoint
+
+## Update tournaments (backend-lite)
+
+Edit **`data/tournaments.json`**:
+
+1. Set **`seriesPoster`** (one main poster image in `assets/`) and optional **`seriesTitle`**
+2. Add or update items in **`events[]`** (title, date, time, venue, buyIn, description, `registrationOpen`)
+3. Refresh the Tournaments page — users tap a schedule row to open the registration form
+
+No code changes required for routine updates.
+
+## Tournament registration form
+
+Set `registrationEndpoint` in `js/site-config.js` to one of:
+
+- **Formspree**: `https://formspree.io/f/YOUR_FORM_ID` (submissions appear in Formspree dashboard / email)
+- **Google Apps Script** web app URL connected to a Google Sheet
+- Any POST endpoint that accepts `multipart/form-data` fields: `name`, `phone`, `email`, `tournament`, `notes`
+
+Until configured, the form shows a setup reminder instead of sending data.
+
+## File structure
+
+```
+index.html
+cash-games.html
+tournaments.html
+gallery.html
+contact.html
+css/styles.css
+js/site-config.js
+js/main.js
+data/tournaments.json
+assets/
+```
+
+## Design notes
+
+- Sticky header + always-visible sub-navigation (no hamburger menu)
+- Compact hero on mobile (~38vh) so contact info is visible with minimal scrolling
+- Black & gold palette aligned with brand logo

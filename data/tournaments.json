@@ -1,0 +1,47 @@
+{
+  "updated": "2026-05-21",
+  "seriesTitle": "King's Cup Nairobi Series",
+  "seriesPoster": "assets/tournament-poster-kings-cup.png",
+  "events": [
+    {
+      "id": "kings-cup-a",
+      "title": "King's Cup — Flight A",
+      "date": "22 May 2026",
+      "time": "15:00",
+      "venue": "Main Floor",
+      "buyIn": "$250",
+      "description": "Deep stacks, 30-minute levels, late registration through Level 8.",
+      "registrationOpen": true
+    },
+    {
+      "id": "savanna-deepstack",
+      "title": "Savanna Deepstack",
+      "date": "23 May 2026",
+      "time": "18:00",
+      "venue": "Deepstack Room",
+      "buyIn": "$120",
+      "description": "88,000 starting stack, relaxed structure for post-flop players.",
+      "registrationOpen": true
+    },
+    {
+      "id": "east-africa-highroller",
+      "title": "East Africa High Roller",
+      "date": "24 May 2026",
+      "time": "19:00",
+      "venue": "VIP Floor",
+      "buyIn": "$350",
+      "description": "Premium buy-in, longer levels, stronger international field.",
+      "registrationOpen": true
+    },
+    {
+      "id": "mystery-bounty",
+      "title": "Mystery Bounty Night",
+      "date": "25 May 2026",
+      "time": "20:00",
+      "venue": "Main Floor",
+      "buyIn": "$150",
+      "description": "Knockout format with random bounty envelopes.",
+      "registrationOpen": true
+    }
+  ]
+}
