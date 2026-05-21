@@ -28,8 +28,15 @@
     <main>
       <section class="page-hero">
         <div class="container">
-          <h1>Cash Games</h1>
-          <p>No Limit Hold'em · waiting list structure · 4% rake (capped per hand).</p>
+          <div class="page-hero-row">
+            <div class="page-hero-text">
+              <h1>Cash Games</h1>
+              <p>No Limit Hold'em · waiting list structure · 4% rake (capped per hand).</p>
+            </div>
+            <button type="button" class="btn secondary btn-compact" data-house-rules-open>
+              House Rules
+            </button>
+          </div>
         </div>
       </section>
 
@@ -72,33 +79,32 @@
         <div class="container">
           <div class="section-head">
             <h2>Table Insurance Odds</h2>
-            <p>Standard NLHE insurance premiums by outs remaining (single card to come).</p>
+            <p>Payout odds by outs remaining (single card to come).</p>
           </div>
           <div class="table-wrap">
-            <table>
+            <table class="insurance-table">
               <thead>
                 <tr>
                   <th>Outs</th>
                   <th>Payout Odds</th>
-                  <th>Insurance Premium</th>
                 </tr>
               </thead>
               <tbody>
-                <tr><td>1</td><td>30 : 1</td><td>3.3%</td></tr>
-                <tr><td>2</td><td>16 : 1</td><td>6.3%</td></tr>
-                <tr><td>3</td><td>10 : 1</td><td>9.5%</td></tr>
-                <tr><td>4</td><td>7.5 : 1</td><td>12.5%</td></tr>
-                <tr><td>5</td><td>6 : 1</td><td>15.5%</td></tr>
-                <tr><td>6</td><td>5 : 1</td><td>18.5%</td></tr>
-                <tr><td>7</td><td>4 : 1</td><td>21.5%</td></tr>
-                <tr><td>8</td><td>3.5 : 1</td><td>24.5%</td></tr>
-                <tr><td>9</td><td>3 : 1</td><td>27.5%</td></tr>
-                <tr><td>10</td><td>2.5 : 1</td><td>30.5%</td></tr>
-                <tr><td>11</td><td>2.2 : 1</td><td>33.5%</td></tr>
-                <tr><td>12</td><td>2 : 1</td><td>36.5%</td></tr>
-                <tr><td>13</td><td>1.8 : 1</td><td>39.5%</td></tr>
-                <tr><td>14</td><td>1.6 : 1</td><td>42.5%</td></tr>
-                <tr><td>15</td><td>1.4 : 1</td><td>45.5%</td></tr>
+                <tr><td>1</td><td>30</td></tr>
+                <tr><td>2</td><td>16</td></tr>
+                <tr><td>3</td><td>10</td></tr>
+                <tr><td>4</td><td>7.5</td></tr>
+                <tr><td>5</td><td>6</td></tr>
+                <tr><td>6</td><td>5</td></tr>
+                <tr><td>7</td><td>4</td></tr>
+                <tr><td>8</td><td>3.5</td></tr>
+                <tr><td>9</td><td>3</td></tr>
+                <tr><td>10</td><td>2.5</td></tr>
+                <tr><td>11</td><td>2.2</td></tr>
+                <tr><td>12</td><td>2</td></tr>
+                <tr><td>13</td><td>1.8</td></tr>
+                <tr><td>14</td><td>1.6</td></tr>
+                <tr><td>15</td><td>1.4</td></tr>
               </tbody>
             </table>
           </div>
@@ -167,6 +173,25 @@
         </div>
       </section>
     </main>
+
+    <div class="rules-image-modal" data-house-rules-modal hidden>
+      <div class="rules-image-modal-backdrop" data-modal-close tabindex="-1" aria-hidden="true"></div>
+      <div
+        class="rules-image-modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-label="PokerKing cash game house rules"
+      >
+        <button class="rules-image-modal-close" type="button" data-modal-close aria-label="Close">
+          ×
+        </button>
+        <img
+          src="assets/PHOTO-2026-05-21-15-22-30.jpg"
+          alt="PokerKing poker house rules for cash games"
+          loading="lazy"
+        />
+      </div>
+    </div>
 
     <footer class="footer">
       <div class="container">

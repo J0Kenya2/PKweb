@@ -48,6 +48,9 @@
     document.querySelectorAll("[data-tiktok]").forEach((el) => {
       if (cfg.tiktok) el.href = cfg.tiktok;
     });
+    document.querySelectorAll("[data-x]").forEach((el) => {
+      if (cfg.x) el.href = cfg.x;
+    });
   };
 
   fillContact();
@@ -59,16 +62,51 @@
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
 
-  const eventLabel = (t) => `${t.title} — ${t.date}${t.time ? ` ${t.time}` : ""}`;
+  const eventLabel = (t) =>
+    t.date ? `${t.title} — ${t.date}${t.time ? ` ${t.time}` : ""}` : t.title;
+
+  const tournamentSummary = (t) => {
+    const parts = [t.format, t.buyIn ? `Buy-in ${t.buyIn}` : ""].filter(Boolean);
+    return parts.join(" · ");
+  };
+
+  const renderTournamentDetails = (t) => {
+    const facts = [
+      ["Format", t.format],
+      ["Buy-in", t.buyIn],
+      ["Guarantee", t.guarantee],
+      ["Starting Stack", t.startingStack],
+    ].filter(([, value]) => value);
+
+    const factsHtml = facts.length
+      ? `<dl class="tournament-detail-facts">${facts
+          .map(
+            ([label, value]) =>
+              `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`
+          )
+          .join("")}</dl>`
+      : "";
+
+    const features = Array.isArray(t.features) ? t.features : [];
+    const featuresHtml = features.length
+      ? `<h3 class="tournament-detail-heading">Tournament Features</h3><ul class="tournament-detail-features">${features
+          .map((line) => `<li>${escapeHtml(line)}</li>`)
+          .join("")}</ul>`
+      : "";
+
+    return `${factsHtml}${featuresHtml}`;
+  };
 
   const modal = document.querySelector("[data-register-modal]");
-  const modalEventLabel = document.querySelector("[data-modal-event-label]");
+  const modalTitle = document.querySelector("[data-modal-title]");
+  const modalDetails = document.querySelector("[data-modal-details]");
   const tournamentInput = document.querySelector("[data-tournament-input]");
 
   const openRegisterModal = (event) => {
     if (!modal || !event || event.registrationOpen === false) return;
     if (tournamentInput) tournamentInput.value = eventLabel(event);
-    if (modalEventLabel) modalEventLabel.textContent = eventLabel(event);
+    if (modalTitle) modalTitle.textContent = event.title || "Register";
+    if (modalDetails) modalDetails.innerHTML = renderTournamentDetails(event);
     modal.hidden = false;
     document.body.style.overflow = "hidden";
     const nameInput = modal.querySelector('input[name="name"]');
@@ -124,8 +162,6 @@
     const posterWrap = document.querySelector("[data-series-poster]");
     const posterImg = document.querySelector("[data-series-poster-img]");
     const posterCaption = document.querySelector("[data-series-poster-caption]");
-    if (!listRoot) return;
-
     try {
       const res = await fetch("data/tournaments.json");
       if (!res.ok) throw new Error("Failed to load tournaments");
@@ -146,10 +182,15 @@
         posterWrap.hidden = false;
       }
 
+      if (!listRoot) return;
+
       listRoot.innerHTML = events
         .map((t) => {
           const open = t.registrationOpen !== false;
           const label = escapeHtml(eventLabel(t));
+          const highlight = t.guarantee
+            ? `<p class="tournament-highlight">${escapeHtml(t.guarantee)}</p>`
+            : "";
           return `
         <button
           type="button"
@@ -158,13 +199,10 @@
           ${open ? "" : "disabled"}
           aria-label="Register for ${label}"
         >
-          <div class="tournament-when">
-            <span class="date">${escapeHtml(t.date)}</span>
-            <span class="time">${escapeHtml(t.time || "TBA")}</span>
-          </div>
           <div class="tournament-info">
             <h3>${escapeHtml(t.title)}</h3>
-            <p>${escapeHtml(t.venue)} · Buy-in ${escapeHtml(t.buyIn)}</p>
+            <p>${escapeHtml(tournamentSummary(t))}</p>
+            ${highlight}
           </div>
           <span class="tournament-cta">${open ? "Register →" : "Closed"}</span>
         </button>`;

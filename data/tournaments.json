@@ -1,46 +1,59 @@
 {
   "updated": "2026-05-21",
-  "seriesTitle": "King's Cup Nairobi Series",
+  "seriesTitle": "PokerKing Tournament Series",
   "seriesPoster": "assets/tournament-poster-kings-cup.png",
   "events": [
     {
-      "id": "kings-cup-a",
-      "title": "King's Cup — Flight A",
-      "date": "22 May 2026",
-      "time": "15:00",
-      "venue": "Main Floor",
-      "buyIn": "$250",
-      "description": "Deep stacks, 30-minute levels, late registration through Level 8.",
-      "registrationOpen": true
-    },
-    {
-      "id": "savanna-deepstack",
-      "title": "Savanna Deepstack",
-      "date": "23 May 2026",
-      "time": "18:00",
-      "venue": "Deepstack Room",
-      "buyIn": "$120",
-      "description": "88,000 starting stack, relaxed structure for post-flop players.",
-      "registrationOpen": true
-    },
-    {
-      "id": "east-africa-highroller",
-      "title": "East Africa High Roller",
-      "date": "24 May 2026",
-      "time": "19:00",
-      "venue": "VIP Floor",
-      "buyIn": "$350",
-      "description": "Premium buy-in, longer levels, stronger international field.",
+      "id": "tuesday-madness",
+      "title": "PokerKing Tuesday Madness",
+      "format": "No Limit Texas Hold'em",
+      "buyIn": "KSh 5,000",
+      "guarantee": "KSh 500,000 GTD",
+      "startingStack": "30,000 Chips",
+      "features": [
+        "Unlimited Rebuys for 2 Hours 20 Minutes",
+        "Single Rebuy: KSh 5,000 — 30,000 Chips",
+        "Double Rebuy: KSh 10,000 — 60,000 Chips",
+        "Single Add-on: 50,000 Chips",
+        "Double Add-on: 100,000 Chips",
+        "Early Bird Bonus: +5,000 Chips",
+        "Website Registration Bonus: +5,000 Chips"
+      ],
       "registrationOpen": true
     },
     {
       "id": "mystery-bounty",
-      "title": "Mystery Bounty Night",
-      "date": "25 May 2026",
-      "time": "20:00",
-      "venue": "Main Floor",
-      "buyIn": "$150",
-      "description": "Knockout format with random bounty envelopes.",
+      "title": "PokerKing Mystery Bounty",
+      "format": "No Limit Texas Hold'em Mystery Bounty",
+      "buyIn": "KSh 5,000 + KSh 2,500 Bounty",
+      "startingStack": "30,000 Chips",
+      "features": [
+        "Single Rebuy: KSh 5,000 + KSh 2,500 Bounty — 30,000 Chips",
+        "Double Rebuy: KSh 10,000 + KSh 2,500 Bounty — 60,000 Chips",
+        "Single Add-on: 50,000 Chips",
+        "Double Add-on: 100,000 Chips",
+        "Early Bird Bonus: +5,000 Chips",
+        "Website Registration Bonus: +5,000 Chips",
+        "Mystery Bounties in Play"
+      ],
+      "registrationOpen": true
+    },
+    {
+      "id": "grand-million",
+      "title": "PokerKing Grand Million",
+      "format": "2-Day No Limit Texas Hold'em Main Event",
+      "buyIn": "KSh 10,000",
+      "guarantee": "KSh 1,000,000 GTD",
+      "startingStack": "30,000 Chips",
+      "features": [
+        "Single Rebuy: KSh 10,000 — 30,000 Chips",
+        "Double Rebuy: KSh 20,000 — 60,000 Chips",
+        "Single Add-on: 50,000 Chips",
+        "Double Add-on: 100,000 Chips",
+        "Early Bird Bonus: +5,000 Chips",
+        "Website Registration Bonus: +5,000 Chips",
+        "2-Day Championship Event"
+      ],
       "registrationOpen": true
     }
   ]

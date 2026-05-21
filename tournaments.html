@@ -31,7 +31,7 @@
           <div class="page-hero-row">
             <div class="page-hero-text">
               <h1>Tournaments</h1>
-              <p>Featured series poster and upcoming flights — tap an event to register.</p>
+              <p>Three signature events — tap Register for full details and to sign up.</p>
             </div>
             <button type="button" class="btn secondary btn-compact" data-house-rules-open>
               House Rules
@@ -40,7 +40,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="tournament-poster-section">
         <div class="container">
           <figure class="series-poster" data-series-poster hidden>
             <img src="" alt="" data-series-poster-img />
@@ -52,8 +52,8 @@
       <section>
         <div class="container">
           <div class="section-head">
-            <h2>Schedule</h2>
-            <p>All times EAT (UTC+3). Tap an event to register.</p>
+            <h2>Events</h2>
+            <p>Tap Register for full structure and online signup.</p>
           </div>
           <div class="tournament-schedule" data-tournament-list>
             <p class="note">Loading schedule…</p>
@@ -71,9 +71,9 @@
         aria-labelledby="register-modal-title"
       >
         <button class="register-modal-close" type="button" data-modal-close aria-label="Close">×</button>
-        <h2 id="register-modal-title">Register</h2>
-        <p class="register-modal-event" data-modal-event-label></p>
-        <form class="form-card" data-registration-form action="YOUR_FORM_ENDPOINT" method="post">
+        <h2 id="register-modal-title" data-modal-title>Register</h2>
+        <div class="register-modal-details" data-modal-details></div>
+        <form class="form-card register-modal-form" data-registration-form action="https://formspree.io/f/xaqkoqez" method="post">
           <input type="hidden" name="tournament" data-tournament-input value="" />
           <div class="form-grid">
             <label>
@@ -83,14 +83,6 @@
             <label>
               Phone / WhatsApp
               <input type="tel" name="phone" required autocomplete="tel" />
-            </label>
-            <label>
-              Email (optional)
-              <input type="email" name="email" autocomplete="email" />
-            </label>
-            <label>
-              Notes (optional)
-              <textarea name="notes" placeholder="Preferred flight, partner name, etc."></textarea>
             </label>
           </div>
           <input type="hidden" name="_subject" value="PokerKing Tournament Registration" />
