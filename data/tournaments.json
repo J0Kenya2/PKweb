@@ -1,13 +1,14 @@
 {
   "updated": "2026-05-21",
   "seriesTitle": "",
-  "seriesPoster": "assets/PHOTO-2026-05-21-16-22-18.jpg",
+  "seriesPoster": "assets/Poster Final.JPG",
   "seriesRegisterEventId": "may-championship",
   "events": [
     {
       "id": "may-championship",
       "title": "PokerKing Grand Opening Tournament",
       "date": "30th – 31st May",
+      "time": "7:00 PM",
       "format": "No Limit Texas Hold'em · 2-Day Event",
       "buyIn": "Free Entry",
       "guarantee": "KSh 2,000,000 GTD",

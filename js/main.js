@@ -66,17 +66,16 @@
     t.date ? `${t.title} — ${t.date}${t.time ? ` ${t.time}` : ""}` : t.title;
 
   const tournamentSummary = (t) => {
-    const parts = [
-      t.date,
-      t.format,
-      t.buyIn ? `Buy-in ${t.buyIn}` : "",
-    ].filter(Boolean);
+    const when =
+      t.date && t.time ? `${t.date} · ${t.time}` : t.date || t.time || "";
+    const parts = [when, t.format, t.buyIn ? `Buy-in ${t.buyIn}` : ""].filter(Boolean);
     return parts.join(" · ");
   };
 
   const renderTournamentDetails = (t) => {
     const facts = [
       ["Date", t.date],
+      ["Start Time", t.time],
       ["Format", t.format],
       ["Buy-in", t.buyIn],
       ["Guarantee", t.guarantee],
