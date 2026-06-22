@@ -1,9 +1,35 @@
 {
-  "updated": "2026-05-21",
+  "updated": "2026-06-22",
   "seriesTitle": "",
-  "seriesPoster": "assets/Poster Final.JPG",
-  "seriesRegisterEventId": "may-championship",
+  "seriesPoster": "assets/poster-3m-mystery-bounty-june-2026.png",
+  "seriesRegisterEventId": "mystery-bounty-3m-june",
   "events": [
+    {
+      "id": "mystery-bounty-3m-june",
+      "title": "3M Guaranteed Mystery Bounty",
+      "date": "27th – 28th June",
+      "time": "7:00 PM",
+      "format": "No Limit Texas Hold'em Mystery Bounty · 2-Day Event",
+      "buyIn": "KSh 10,000",
+      "guarantee": "KSh 3,000,000 GTD",
+      "startingStack": "40,000 Chips",
+      "features": [
+        "Nairobi's First Mystery Bounty · KSh 1.2M bounty pool",
+        "Bounty phase begins at the final 30 players",
+        "Knockout a player to pick a mystery card — prizes up to KSh 250,000",
+        "Entry: KSh 10,000 — 40,000 Chips",
+        "Early Bird: +5,000 Chips (present by end of Level 1)",
+        "Website Registration Bonus: +5,000 Chips",
+        "Single Rebuy: KSh 10,000 — 40,000 Chips",
+        "Double Rebuy: KSh 20,000 — 90,000 Chips",
+        "Unlimited Rebuys for 4 Hours",
+        "Single Add-on: KSh 10,000 — 60,000 Chips",
+        "Double Add-on: KSh 25,000 — 200,000 Chips",
+        "Blind Levels: 30 Minutes",
+        "Late Registration & Rebuys: 8 Levels"
+      ],
+      "registrationOpen": true
+    },
     {
       "id": "may-championship",
       "title": "PokerKing Grand Opening Tournament",
@@ -13,6 +39,7 @@
       "buyIn": "Free Entry",
       "guarantee": "KSh 2,000,000 GTD",
       "startingStack": "30,000 Chips",
+      "showInList": false,
       "features": [
         "Free entry starting stack: 30,000 chips",
         "Unlimited Rebuys for 3 Hours",
@@ -25,7 +52,7 @@
         "Blind Levels: 30 Minutes",
         "Late Registration & Rebuys: 8 Levels (4 Hours)"
       ],
-      "registrationOpen": true
+      "registrationOpen": false
     },
     {
       "id": "tuesday-madness",
