@@ -106,7 +106,7 @@
         "Website Registration Bonus: +5,000 Chips",
         "2-Day Championship Event"
       ],
-      "registrationOpen": true
+      "registrationOpen": false
     }
   ]
 }

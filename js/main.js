@@ -229,7 +229,7 @@
             <p>${escapeHtml(tournamentSummary(t))}</p>
             ${highlight}
           </div>
-          <span class="tournament-cta">${open ? "Register →" : "Closed"}</span>
+          <span class="tournament-cta">${open ? "Register →" : "Finished"}</span>
         </button>`;
         })
         .join("");
