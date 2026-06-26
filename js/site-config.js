@@ -11,7 +11,7 @@ window.POKERKING_CONFIG = {
   email: "info@pokerking.ke",
   whatsapp: "https://wa.me/254117306505",
   instagram: "https://www.instagram.com/pokerkingke/",
-  tiktok: "https://www.tiktok.com/@pokerkingke",
+  tiktok: "https://www.tiktok.com/@pkerkngnairobi?_r=1&_t=ZS-97WoXCNs5Uu",
   x: "https://x.com/pokerkingke",
   /** Formspree form ID, Google Apps Script URL, or other POST endpoint */
   registrationEndpoint: "https://formspree.io/f/xaqkoqez",
